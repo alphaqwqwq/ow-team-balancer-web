@@ -55,10 +55,11 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
 .pm-form { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(12px, 1.6vw, 22px); margin-bottom: clamp(10px, 1vw, 16px); }
 .pm-form-row { margin-bottom: clamp(8px, 1vw, 16px); }
 .pm-form-row .input { width: 100%; }
-.pm-form-sliders { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: clamp(8px, 1vw, 16px); margin-bottom: clamp(8px, 1vw, 16px); }
-.pm-form-sliders label { display: flex; align-items: center; gap: clamp(4px, 0.5vw, 8px); font-size: clamp(12px, 1.2vw, 16px); color: var(--text-dim); }
-.pm-form-sliders .select { width: 100%; }
-.lock-label .select { width: 100%; }
+.pm-form-sliders { display: flex; gap: clamp(8px, 1vw, 16px); flex-wrap: wrap; margin-bottom: clamp(8px, 1vw, 16px); }
+.pm-form-sliders label { display: flex; align-items: center; gap: clamp(4px, 0.5vw, 8px); font-size: clamp(12px, 1.2vw, 16px); color: var(--text-dim); white-space: nowrap; }
+.pm-slider-label { min-width: 4.2em; flex-shrink: 0; }
+.pm-form-sliders .select { width: clamp(80px, 10vw, 120px); }
+.lock-label .select { width: clamp(60px, 8vw, 100px); }
 .pm-form-actions { display: flex; gap: clamp(6px, 0.7vw, 10px); align-items: center; }
 .pm-count { margin-left: auto; font-size: clamp(12px, 1.2vw, 16px); color: var(--text-muted); }
 .pm-actions { display: flex; gap: clamp(6px, 0.7vw, 10px); margin-bottom: clamp(10px, 1vw, 16px); flex-wrap: wrap; }
@@ -145,11 +146,11 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   .app-nav { width: 100%; }
   .nav-btn { flex: 1; text-align: center; font-size: clamp(11px, 2vw, 12px); padding: clamp(4px, 1vw, 6px) clamp(3px, 0.6vw, 4px); }
   .app-main { padding: clamp(10px, 2vw, 12px); }
-  .pm-form-sliders { grid-template-columns: 1fr; }
+  .pm-form-sliders { flex-direction: column; }
   .tc-config-bar { flex-direction: column; align-items: flex-start; }
   .tc-info { width: 100%; text-align: left; }
-  .rd-teams { flex-direction: column; }
-  .rd-vs { justify-content: center; padding-top: 0; padding: clamp(8px, 2vw, 12px) 0; font-size: 16px; }
+  .rd-teams { gap: clamp(8px, 2vw, 12px); }
+  .rd-vs { justify-content: center; padding-top: 0; padding: 0 4px; font-size: 14px; }
   .rd-team { padding: 14px 16px; }
   .rd-team-title { font-size: 16px; margin-bottom: 12px; }
   .rd-player { gap: 8px; padding: 4px 0; }
@@ -187,13 +188,16 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
   .rd-name { font-size: 12px; }
   .rd-mode { font-size: 12px; }
   .rd-team-title { font-size: 14px; }
+  .rd-team { padding: 8px 10px; }
   .rd-player { gap: 6px; padding: 3px 0; }
   .rd-role-icon { width: 18px; font-size: 12px; }
+  .rd-vs { font-size: 12px; padding: 0 2px; }
   .tc-config-bar { padding: 8px 10px; gap: 8px; }
   .rd-header { padding: 8px 10px; gap: 8px; flex-wrap: wrap; }
   .rd-diff { margin-left: 0; }
   .input, .select { font-size: 12px; padding: 5px 8px; }
   .btn { font-size: 11px; padding: 5px 8px; }
   .tc-player-list { max-height: 200px; }
+  .rd-teams { gap: 4px; }
   .rd-toggle { font-size: 10px; }
 }

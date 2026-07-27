@@ -130,11 +130,11 @@ export default function PlayerManager({ onPlayersChange }: Props) {
           />
         </div>
         <div className="pm-form-sliders">
-          <label>🛡️ T <select value={tWeight} onChange={e => setTWeight(+e.target.value)}>{weightOptions}</select></label>
-          <label>⚔️ DPS <select value={dWeight} onChange={e => setDWeight(+e.target.value)}>{weightOptions}</select></label>
-          <label>💉 S <select value={sWeight} onChange={e => setSWeight(+e.target.value)}>{weightOptions}</select></label>
+          <label><span className="pm-slider-label">🛡️ T</span> <select value={tWeight} onChange={e => setTWeight(+e.target.value)}>{weightOptions}</select></label>
+          <label><span className="pm-slider-label">⚔️ DPS</span> <select value={dWeight} onChange={e => setDWeight(+e.target.value)}>{weightOptions}</select></label>
+          <label><span className="pm-slider-label">💉 S</span> <select value={sWeight} onChange={e => setSWeight(+e.target.value)}>{weightOptions}</select></label>
           <label className="lock-label">
-            锁定位置
+            <span className="pm-slider-label">锁定位置</span>
             <select value={lockedRole} onChange={e => setLockedRole(e.target.value as any)}>
               <option value="">不锁</option><option value="T">T</option><option value="DPS">DPS</option><option value="S">S</option>
             </select>
